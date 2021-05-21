@@ -451,7 +451,7 @@ export default async function loadConfig(
           : canonicalBase) || ''
     }
 
-    if (hasNextSupport) {
+    if (hasNextSupport || process.env.NEXT_PRIVATE_TARGET) {
       userConfig.target = process.env.NEXT_PRIVATE_TARGET || 'server'
     }
 
